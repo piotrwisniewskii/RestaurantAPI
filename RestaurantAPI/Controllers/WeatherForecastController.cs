@@ -16,6 +16,7 @@ namespace RestaurantAPI.Controllers
             _service = service;
         }
 
+
         [HttpPost("generate")]
         public ActionResult<IEnumerable<WeatherForecast>> Generate([FromQuery]int count, [FromBody]TemperatureRequest request)
         {

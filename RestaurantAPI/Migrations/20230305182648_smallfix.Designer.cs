@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RestaurantAPI.Entities;
 
@@ -10,9 +11,11 @@ using RestaurantAPI.Entities;
 namespace RestaurantAPI.Migrations
 {
     [DbContext(typeof(RestaurantDbContext))]
-    partial class RestaurantDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230305182648_smallfix")]
+    partial class smallfix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,36 +34,19 @@ namespace RestaurantAPI.Migrations
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PostalCode")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Street")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Addresses");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            City = "Kraków",
-                            PostalCode = "30-001",
-                            Street = "Szewska 2"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            City = "Kraków",
-                            PostalCode = "30-001",
-                            Street = "Długa 5"
-                        });
                 });
 
             modelBuilder.Entity("RestaurantAPI.Entities.Dish", b =>
@@ -72,6 +58,7 @@ namespace RestaurantAPI.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -89,22 +76,6 @@ namespace RestaurantAPI.Migrations
                     b.HasIndex("RestaurantId");
 
                     b.ToTable("Dishes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Nashville Hot chicken",
-                            Price = 10.30m,
-                            RestaurantId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Chicken Nuggets",
-                            Price = 5.30m,
-                            RestaurantId = 1
-                        });
                 });
 
             modelBuilder.Entity("RestaurantAPI.Entities.Restaurant", b =>
@@ -119,15 +90,18 @@ namespace RestaurantAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Category")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactEmail")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("HasDelivery")
@@ -144,28 +118,6 @@ namespace RestaurantAPI.Migrations
                         .IsUnique();
 
                     b.ToTable("Restaurants");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AddressId = 1,
-                            Category = "Fast Food",
-                            ContactEmail = "contact@kfc.com",
-                            Description = "KFC (short for Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in America",
-                            HasDelivery = true,
-                            Name = "KFC"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AddressId = 2,
-                            Category = "Fast Food",
-                            ContactEmail = "contact@mcdonald.com",
-                            Description = "McDonald's Corporation (McDonald's), incorporated on December 21, 1964, operates and franchises McDonald's restaurants.",
-                            HasDelivery = true,
-                            Name = "McDonald Szewska"
-                        });
                 });
 
             modelBuilder.Entity("RestaurantAPI.Entities.Dish", b =>
@@ -192,7 +144,8 @@ namespace RestaurantAPI.Migrations
 
             modelBuilder.Entity("RestaurantAPI.Entities.Address", b =>
                 {
-                    b.Navigation("Restaurant");
+                    b.Navigation("Restaurant")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("RestaurantAPI.Entities.Restaurant", b =>

@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using RestaurantAPI.Entities;
+using RestaurantAPI.Seed;
 using System;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace RestaurantAPI
 {
@@ -18,8 +20,6 @@ namespace RestaurantAPI
             builder.Services.AddDbContext<RestaurantDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
             var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
 
             app.UseHttpsRedirection();
 
