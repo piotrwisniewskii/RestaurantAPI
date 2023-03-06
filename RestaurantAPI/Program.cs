@@ -15,7 +15,7 @@ namespace RestaurantAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
-
+            builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddDbContext<RestaurantDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
             var app = builder.Build();
