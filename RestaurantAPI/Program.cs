@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RestaurantAPI.Entities;
 using RestaurantAPI.Seed;
+using RestaurantAPI.Services;
 using System;
 using static System.Formats.Asn1.AsnWriter;
 
@@ -16,8 +17,11 @@ namespace RestaurantAPI
 
             builder.Services.AddControllers();
             builder.Services.AddAutoMapper(typeof(Program));
+            builder.Services.AddScoped<IRestaurantService, RestaurantService>();
             builder.Services.AddDbContext<RestaurantDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+
+
             var app = builder.Build();
 
             app.UseHttpsRedirection();
