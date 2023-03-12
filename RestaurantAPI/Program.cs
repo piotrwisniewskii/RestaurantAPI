@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RestaurantAPI.Entities;
+using RestaurantAPI.Middleware;
 using RestaurantAPI.Services;
 using Serilog;
 
@@ -19,14 +20,9 @@ namespace RestaurantAPI
             builder.Services.AddControllers();
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddScoped<IRestaurantService, RestaurantService>();
+            builder.Services.AddScoped<ErrorHandlingMiddleware>();
             builder.Services.AddDbContext<RestaurantDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
-
-
-            builder.Host.UseSerilog((HostBuilderContext, LoggerConfiguration) =>
-            {
-                LoggerConfiguration.WriteTo.Console();
-            });
 
             builder.Host.UseSerilog((HostBuilderContext, LoggerConfiguration) =>
             {
@@ -38,6 +34,7 @@ namespace RestaurantAPI
 
             var app = builder.Build();
 
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
