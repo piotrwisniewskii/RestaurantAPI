@@ -40,11 +40,6 @@ namespace RestaurantAPI.Controllers
         public ActionResult CreateRestaurant(CreateRestaurantDto dto)
         {
 
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             var id = _restaurantService.Create(dto);
 
             return Created($"/api/restaurant/{id}",null);
@@ -62,13 +57,7 @@ namespace RestaurantAPI.Controllers
         [HttpPut("{id}")]
         public ActionResult Update(UpdateRestaurantDto dto, int id)
         {
-            if(!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
           _restaurantService.Update(id, dto);
-
 
             return Ok();
         }

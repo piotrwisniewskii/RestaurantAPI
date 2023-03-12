@@ -281,3 +281,103 @@ ORDER BY [r].[Id], [a].[Id]
 2023-03-12 18:52:24.864 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI) in 2322.3407ms
 2023-03-12 18:52:24.864 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
 2023-03-12 18:52:24.879 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/api/restaurant?count=10 - - - 200 - application/json;+charset=utf-8 2394.6565ms
+2023-03-12 18:57:56.970 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 18:57:56.986 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 18:57:56.991 +01:00 [INF] Hosting environment: Development
+2023-03-12 18:57:56.991 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 18:57:57.287 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 303.6143ms
+2023-03-12 18:58:21.797 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:44335/api/restaurant/888?count=10 application/json 78
+2023-03-12 18:58:21.815 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI)'
+2023-03-12 18:58:21.854 +01:00 [INF] Route matched with {action = "Update", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Update(RestaurantAPI.Models.UpdateRestaurantDto, Int32) on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 18:58:22.813 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-03-12 18:58:23.733 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name]
+FROM [Restaurants] AS [r]
+WHERE [r].[Id] = @__id_0
+2023-03-12 18:59:01.980 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI) in 40122.1212ms
+2023-03-12 18:59:01.982 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI)'
+2023-03-12 18:59:02.016 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:44335/api/restaurant/888?count=10 application/json 78 - 404 - - 40219.2455ms
+2023-03-12 18:59:12.932 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 18:59:12.952 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 18:59:12.955 +01:00 [INF] Hosting environment: Development
+2023-03-12 18:59:12.955 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 18:59:13.061 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 113.4700ms
+2023-03-12 18:59:22.097 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:44335/api/restaurant/888?count=10 application/json 78
+2023-03-12 18:59:22.113 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI)'
+2023-03-12 18:59:22.149 +01:00 [INF] Route matched with {action = "Update", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Update(RestaurantAPI.Models.UpdateRestaurantDto, Int32) on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 18:59:23.088 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-03-12 18:59:24.033 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name]
+FROM [Restaurants] AS [r]
+WHERE [r].[Id] = @__id_0
+2023-03-12 18:59:25.371 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI) in 3218.2072ms
+2023-03-12 18:59:25.373 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI)'
+2023-03-12 18:59:25.406 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:44335/api/restaurant/888?count=10 application/json 78 - 404 - - 3308.6099ms
+2023-03-12 19:02:11.013 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 19:02:11.033 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 19:02:11.035 +01:00 [INF] Hosting environment: Development
+2023-03-12 19:02:11.036 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 19:02:11.122 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 93.2579ms
+2023-03-12 19:02:24.067 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:44335/api/restaurant/888?count=10 application/json 120
+2023-03-12 19:02:24.078 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI)'
+2023-03-12 19:02:24.115 +01:00 [INF] Route matched with {action = "Update", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Update(RestaurantAPI.Models.UpdateRestaurantDto, Int32) on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 19:02:24.469 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-12 19:02:24.506 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI) in 387.0461ms
+2023-03-12 19:02:24.509 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI)'
+2023-03-12 19:02:24.515 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:44335/api/restaurant/888?count=10 application/json 120 - 400 - application/problem+json;+charset=utf-8 448.6118ms
+2023-03-12 20:52:29.631 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 20:52:29.654 +01:00 [INF] Hosting environment: Development
+2023-03-12 20:52:29.656 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 20:52:29.661 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 20:52:29.786 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 128.9428ms
+2023-03-12 20:52:41.051 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 20:52:41.067 +01:00 [INF] Hosting environment: Development
+2023-03-12 20:52:41.068 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 20:52:41.069 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 20:52:41.208 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 143.2374ms
+2023-03-12 20:52:44.912 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/swagger - -
+2023-03-12 20:52:44.927 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/swagger - - - 301 - - 15.3527ms
+2023-03-12 20:52:44.930 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/swagger/index.html - -
+2023-03-12 20:52:45.114 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/favicon.ico - -
+2023-03-12 20:52:45.124 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/favicon.ico - - - 404 - - 9.5046ms
+2023-03-12 20:52:45.261 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/swagger/index.html - - - 200 - text/html;charset=utf-8 330.7959ms
+2023-03-12 20:53:39.257 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 20:53:39.279 +01:00 [INF] Hosting environment: Development
+2023-03-12 20:53:39.281 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 20:53:39.280 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 20:53:39.419 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 145.3911ms
+2023-03-12 20:53:45.541 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/swagger/index.html - -
+2023-03-12 20:53:45.797 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/swagger/index.html - - - 200 - text/html;charset=utf-8 255.5266ms
+2023-03-12 20:53:45.800 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/swagger/swagger-ui.css - -
+2023-03-12 20:53:45.800 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/swagger/swagger-ui-bundle.js - -
+2023-03-12 20:53:45.803 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/_vs/browserLink - -
+2023-03-12 20:53:45.806 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/swagger/swagger-ui-standalone-preset.js - -
+2023-03-12 20:53:45.808 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/_framework/aspnetcore-browser-refresh.js - -
+2023-03-12 20:53:45.825 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 14.9073ms
+2023-03-12 20:53:45.835 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-03-12 20:53:45.835 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-03-12 20:53:45.835 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-03-12 20:53:45.837 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/swagger/swagger-ui.css - - - 200 144929 text/css 37.5574ms
+2023-03-12 20:53:45.844 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 38.9393ms
+2023-03-12 20:53:45.864 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 63.7890ms
+2023-03-12 20:53:45.886 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 82.9170ms
+2023-03-12 20:53:45.985 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/swagger/v1/swagger.json - -
+2023-03-12 20:53:45.997 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/swagger/favicon-32x32.png - -
+2023-03-12 20:53:45.997 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-03-12 20:53:45.997 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/swagger/favicon-32x32.png - - - 200 628 image/png 0.6877ms
+2023-03-12 20:53:46.078 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 92.6284ms
+2023-03-12 20:53:59.435 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/api/Restaurant - -
+2023-03-12 20:53:59.442 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 20:53:59.457 +01:00 [INF] Route matched with {action = "GetAll", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestaurantAPI.Models.RestaurantDto]] GetAll() on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 20:53:59.752 +01:00 [INF] all Restaurants were shown
+2023-03-12 20:54:00.394 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-03-12 20:54:01.520 +01:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name], [a].[Id], [a].[City], [a].[PostalCode], [a].[Street], [d].[Id], [d].[Description], [d].[Name], [d].[Price], [d].[RestaurantId]
+FROM [Restaurants] AS [r]
+INNER JOIN [Addresses] AS [a] ON [r].[AddressId] = [a].[Id]
+LEFT JOIN [Dishes] AS [d] ON [r].[Id] = [d].[RestaurantId]
+ORDER BY [r].[Id], [a].[Id]
+2023-03-12 20:54:01.646 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestaurantAPI.Models.RestaurantDto, RestaurantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-12 20:54:01.666 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI) in 2204.9333ms
+2023-03-12 20:54:01.666 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 20:54:01.678 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/api/Restaurant - - - 200 - application/json;+charset=utf-8 2243.1338ms
