@@ -1,9 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RestaurantAPI.Entities;
-using RestaurantAPI.Seed;
 using RestaurantAPI.Services;
-using System;
-using static System.Formats.Asn1.AsnWriter;
+using Serilog;
 
 namespace RestaurantAPI
 {
@@ -15,11 +13,27 @@ namespace RestaurantAPI
 
             // Add services to the container.
 
+            builder.Logging.ClearProviders();
+            builder.Logging.AddConsole().SetMinimumLevel(LogLevel.Debug);
+
             builder.Services.AddControllers();
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddScoped<IRestaurantService, RestaurantService>();
             builder.Services.AddDbContext<RestaurantDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+
+
+            builder.Host.UseSerilog((HostBuilderContext, LoggerConfiguration) =>
+            {
+                LoggerConfiguration.WriteTo.Console();
+            });
+
+            builder.Host.UseSerilog((HostBuilderContext, LoggerConfiguration) =>
+            {
+                LoggerConfiguration.WriteTo.Console();
+
+                LoggerConfiguration.WriteTo.File("C:\\Users\\piotr\\Desktop\\C#\\REST WebAPI\\RestaurantAPI\\info").MinimumLevel.Information();
+            });
 
 
             var app = builder.Build();

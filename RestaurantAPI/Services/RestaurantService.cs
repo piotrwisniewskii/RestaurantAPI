@@ -33,6 +33,8 @@ namespace RestaurantAPI.Services
 
         public IEnumerable<RestaurantDto> GetAll()
         {
+            
+
             var restaurants = _context.Restaurants
                .Include(r => r.Address)
                .Include(r => r.Dishes)
@@ -54,6 +56,8 @@ namespace RestaurantAPI.Services
 
         public bool Delete(int id)
         {
+            
+
             var restaurant = _context
                 .Restaurants
                 .FirstOrDefault(x => x.Id == id);

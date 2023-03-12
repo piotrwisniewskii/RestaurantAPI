@@ -1,0 +1,180 @@
+2023-03-12 16:53:16.669 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 16:53:16.685 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 16:53:16.689 +01:00 [INF] Hosting environment: Development
+2023-03-12 16:53:16.689 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 16:53:16.756 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 74.4311ms
+2023-03-12 16:53:33.301 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 16:53:33.317 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 16:53:33.321 +01:00 [INF] Hosting environment: Development
+2023-03-12 16:53:33.322 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 16:53:33.391 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 76.9093ms
+2023-03-12 16:53:37.927 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast/20 - -
+2023-03-12 16:53:37.928 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast/20 - - - 404 - - 1.3347ms
+2023-03-12 16:53:41.285 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast/1000 - -
+2023-03-12 16:53:41.286 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast/1000 - - - 404 - - 0.8618ms
+2023-03-12 16:58:21.964 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 16:58:21.991 +01:00 [INF] Hosting environment: Development
+2023-03-12 16:58:21.989 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 16:58:21.994 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 16:58:22.100 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 115.1316ms
+2023-03-12 16:58:28.144 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 16:58:28.146 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 1.6676ms
+2023-03-12 16:58:34.658 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast/2 - -
+2023-03-12 16:58:34.659 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast/2 - - - 404 - - 1.2251ms
+2023-03-12 16:58:51.982 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:44335/api/restaurant/864?count=10 application/json 81
+2023-03-12 16:58:51.990 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI)'
+2023-03-12 16:58:52.057 +01:00 [INF] Route matched with {action = "Update", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Update(RestaurantAPI.Models.UpdateRestaurantDto, Int32) on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 16:58:53.236 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-03-12 16:58:54.456 +01:00 [INF] Executed DbCommand (98ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name]
+FROM [Restaurants] AS [r]
+WHERE [r].[Id] = @__id_0
+2023-03-12 16:58:54.488 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-03-12 16:58:54.527 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI) in 2466.9622ms
+2023-03-12 16:58:54.528 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.Update (RestaurantAPI)'
+2023-03-12 16:58:54.544 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:44335/api/restaurant/864?count=10 application/json 81 - 404 - application/problem+json;+charset=utf-8 2562.3209ms
+2023-03-12 16:59:01.295 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 81
+2023-03-12 16:59:01.295 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 16:59:01.297 +01:00 [INF] Route matched with {action = "GetAll", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestaurantAPI.Models.RestaurantDto]] GetAll() on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 16:59:01.440 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name], [a].[Id], [a].[City], [a].[PostalCode], [a].[Street], [d].[Id], [d].[Description], [d].[Name], [d].[Price], [d].[RestaurantId]
+FROM [Restaurants] AS [r]
+INNER JOIN [Addresses] AS [a] ON [r].[AddressId] = [a].[Id]
+LEFT JOIN [Dishes] AS [d] ON [r].[Id] = [d].[RestaurantId]
+ORDER BY [r].[Id], [a].[Id]
+2023-03-12 16:59:01.536 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestaurantAPI.Models.RestaurantDto, RestaurantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-12 16:59:01.566 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI) in 269.496ms
+2023-03-12 16:59:01.566 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 16:59:01.566 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 81 - 200 - application/json;+charset=utf-8 271.1498ms
+2023-03-12 16:59:03.009 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 81
+2023-03-12 16:59:03.010 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 16:59:03.010 +01:00 [INF] Route matched with {action = "GetAll", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestaurantAPI.Models.RestaurantDto]] GetAll() on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 16:59:03.051 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name], [a].[Id], [a].[City], [a].[PostalCode], [a].[Street], [d].[Id], [d].[Description], [d].[Name], [d].[Price], [d].[RestaurantId]
+FROM [Restaurants] AS [r]
+INNER JOIN [Addresses] AS [a] ON [r].[AddressId] = [a].[Id]
+LEFT JOIN [Dishes] AS [d] ON [r].[Id] = [d].[RestaurantId]
+ORDER BY [r].[Id], [a].[Id]
+2023-03-12 16:59:03.051 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestaurantAPI.Models.RestaurantDto, RestaurantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-12 16:59:03.051 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI) in 41.6851ms
+2023-03-12 16:59:03.051 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 16:59:03.052 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 81 - 200 - application/json;+charset=utf-8 42.1607ms
+2023-03-12 16:59:15.307 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44335/api/restaurant?count=10 application/json 83
+2023-03-12 16:59:15.307 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.CreateRestaurant (RestaurantAPI)'
+2023-03-12 16:59:15.308 +01:00 [INF] Route matched with {action = "CreateRestaurant", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult CreateRestaurant(RestaurantAPI.Models.CreateRestaurantDto) on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 16:59:15.314 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-03-12 16:59:15.317 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.CreateRestaurant (RestaurantAPI) in 8.8003ms
+2023-03-12 16:59:15.317 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.CreateRestaurant (RestaurantAPI)'
+2023-03-12 16:59:15.317 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44335/api/restaurant?count=10 application/json 83 - 400 - application/problem+json;+charset=utf-8 10.1753ms
+2023-03-12 17:02:35.974 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 17:02:35.996 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 17:02:36.001 +01:00 [INF] Hosting environment: Development
+2023-03-12 17:02:36.002 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 17:02:36.081 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 89.2238ms
+2023-03-12 17:02:55.329 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:44335/api/restaurant/888?count=10 application/json 83
+2023-03-12 17:02:55.337 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI)'
+2023-03-12 17:02:55.373 +01:00 [INF] Route matched with {action = "Delete", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(Int32) on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 17:02:55.619 +01:00 [WRN] Restaurant with id: 888 DELETE action invoked
+2023-03-12 17:02:56.223 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-03-12 17:02:57.146 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name]
+FROM [Restaurants] AS [r]
+WHERE [r].[Id] = @__id_0
+2023-03-12 17:02:57.176 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-03-12 17:02:57.237 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI) in 1860.0236ms
+2023-03-12 17:02:57.237 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI)'
+2023-03-12 17:02:57.255 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:44335/api/restaurant/888?count=10 application/json 83 - 404 - application/problem+json;+charset=utf-8 1925.2850ms
+2023-03-12 17:04:45.332 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 17:04:45.352 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 17:04:45.357 +01:00 [INF] Hosting environment: Development
+2023-03-12 17:04:45.357 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 17:04:45.426 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 78.9783ms
+2023-03-12 17:04:49.342 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:44335/api/restaurant/888?count=10 application/json 83
+2023-03-12 17:04:49.349 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI)'
+2023-03-12 17:04:49.385 +01:00 [INF] Route matched with {action = "Delete", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(Int32) on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 17:04:49.641 +01:00 [INF] Restaurant with id: 888 DELETE action invoked
+2023-03-12 17:04:50.280 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-03-12 17:04:51.245 +01:00 [INF] Executed DbCommand (56ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name]
+FROM [Restaurants] AS [r]
+WHERE [r].[Id] = @__id_0
+2023-03-12 17:04:51.274 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-03-12 17:04:51.337 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI) in 1947.9761ms
+2023-03-12 17:04:51.337 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI)'
+2023-03-12 17:04:51.350 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:44335/api/restaurant/888?count=10 application/json 83 - 404 - application/problem+json;+charset=utf-8 2007.7117ms
+2023-03-12 17:05:10.965 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:44335/api/restaurant/888?count=10 application/json 83
+2023-03-12 17:05:10.965 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI)'
+2023-03-12 17:05:10.965 +01:00 [INF] Route matched with {action = "Delete", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(Int32) on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 17:05:20.368 +01:00 [INF] Restaurant with id: 888 DELETE action invoked
+2023-03-12 17:09:03.037 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 17:09:03.055 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 83
+2023-03-12 17:09:03.059 +01:00 [INF] Hosting environment: Development
+2023-03-12 17:09:03.059 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 17:09:03.097 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 17:09:03.133 +01:00 [INF] Route matched with {action = "GetAll", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestaurantAPI.Models.RestaurantDto]] GetAll() on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 17:09:19.140 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 17:09:19.159 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 17:09:19.163 +01:00 [INF] Hosting environment: Development
+2023-03-12 17:09:19.164 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 17:09:19.241 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 85.3119ms
+2023-03-12 17:09:20.813 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 83
+2023-03-12 17:09:20.820 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 17:09:20.849 +01:00 [INF] Route matched with {action = "GetAll", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestaurantAPI.Models.RestaurantDto]] GetAll() on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 17:09:39.308 +01:00 [INF] all Restaurants were shown
+2023-03-12 17:09:51.962 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-03-12 17:09:52.938 +01:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name], [a].[Id], [a].[City], [a].[PostalCode], [a].[Street], [d].[Id], [d].[Description], [d].[Name], [d].[Price], [d].[RestaurantId]
+FROM [Restaurants] AS [r]
+INNER JOIN [Addresses] AS [a] ON [r].[AddressId] = [a].[Id]
+LEFT JOIN [Dishes] AS [d] ON [r].[Id] = [d].[RestaurantId]
+ORDER BY [r].[Id], [a].[Id]
+2023-03-12 17:09:53.064 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestaurantAPI.Models.RestaurantDto, RestaurantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-12 17:09:53.194 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI) in 32340.7291ms
+2023-03-12 17:09:53.194 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 17:09:53.208 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 83 - 0 - application/json;+charset=utf-8 32394.4619ms
+2023-03-12 17:09:59.590 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 83
+2023-03-12 17:09:59.590 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 17:09:59.590 +01:00 [INF] Route matched with {action = "GetAll", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestaurantAPI.Models.RestaurantDto]] GetAll() on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 17:10:01.916 +01:00 [INF] all Restaurants were shown
+2023-03-12 17:10:01.943 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name], [a].[Id], [a].[City], [a].[PostalCode], [a].[Street], [d].[Id], [d].[Description], [d].[Name], [d].[Price], [d].[RestaurantId]
+FROM [Restaurants] AS [r]
+INNER JOIN [Addresses] AS [a] ON [r].[AddressId] = [a].[Id]
+LEFT JOIN [Dishes] AS [d] ON [r].[Id] = [d].[RestaurantId]
+ORDER BY [r].[Id], [a].[Id]
+2023-03-12 17:10:01.943 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestaurantAPI.Models.RestaurantDto, RestaurantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-12 17:10:01.947 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI) in 2356.5154ms
+2023-03-12 17:10:01.947 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 17:10:01.947 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 83 - 200 - application/json;+charset=utf-8 2357.4354ms
+2023-03-12 17:19:47.554 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 17:19:47.570 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 17:19:47.573 +01:00 [INF] Hosting environment: Development
+2023-03-12 17:19:47.573 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 17:19:47.641 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 74.1620ms
+2023-03-12 17:19:48.832 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 83
+2023-03-12 17:19:48.839 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 17:19:48.867 +01:00 [INF] Route matched with {action = "GetAll", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestaurantAPI.Models.RestaurantDto]] GetAll() on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 17:19:49.098 +01:00 [INF] all Restaurants were shown
+2023-03-12 17:19:49.708 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-03-12 17:19:50.961 +01:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name], [a].[Id], [a].[City], [a].[PostalCode], [a].[Street], [d].[Id], [d].[Description], [d].[Name], [d].[Price], [d].[RestaurantId]
+FROM [Restaurants] AS [r]
+INNER JOIN [Addresses] AS [a] ON [r].[AddressId] = [a].[Id]
+LEFT JOIN [Dishes] AS [d] ON [r].[Id] = [d].[RestaurantId]
+ORDER BY [r].[Id], [a].[Id]
+2023-03-12 17:19:51.087 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestaurantAPI.Models.RestaurantDto, RestaurantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-12 17:19:51.192 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI) in 2321.8994ms
+2023-03-12 17:19:51.193 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 17:19:51.209 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/api/restaurant?count=10 application/json 83 - 200 - application/json;+charset=utf-8 2377.2412ms
+2023-03-12 17:19:56.094 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:44335/api/restaurant/899?count=10 application/json 83
+2023-03-12 17:19:56.095 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI)'
+2023-03-12 17:19:56.103 +01:00 [INF] Route matched with {action = "Delete", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(Int32) on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 17:19:56.113 +01:00 [INF] Restaurant with id: 899 DELETE action invoked
+2023-03-12 17:19:56.188 +01:00 [INF] Executed DbCommand (36ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name]
+FROM [Restaurants] AS [r]
+WHERE [r].[Id] = @__id_0
+2023-03-12 17:19:56.190 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-03-12 17:19:56.201 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI) in 98.4117ms
+2023-03-12 17:19:56.201 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.Delete (RestaurantAPI)'
+2023-03-12 17:19:56.202 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:44335/api/restaurant/899?count=10 application/json 83 - 404 - application/problem+json;+charset=utf-8 107.3208ms

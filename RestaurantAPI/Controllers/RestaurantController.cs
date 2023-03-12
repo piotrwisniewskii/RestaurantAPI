@@ -13,14 +13,18 @@ namespace RestaurantAPI.Controllers
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantService _restaurantService;
+        private readonly ILogger<RestaurantController> _logger;
 
-        public RestaurantController(IRestaurantService restaurantService)
+        public RestaurantController(IRestaurantService restaurantService, ILogger<RestaurantController> logger)
         {
             _restaurantService = restaurantService;
+            _logger = logger;
         }
         [HttpGet]
         public ActionResult<IEnumerable<RestaurantDto>> GetAll()
         {
+
+            _logger.LogInformation($"all Restaurants were shown");
             var restaurantsDtos = _restaurantService.GetAll();
 
             return Ok(restaurantsDtos);
@@ -29,6 +33,8 @@ namespace RestaurantAPI.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
+            _logger.LogInformation($"Restaurant with id: {id} DELETE action invoked");
+
             var isDeleted = _restaurantService.Delete(id);
 
             if (isDeleted)

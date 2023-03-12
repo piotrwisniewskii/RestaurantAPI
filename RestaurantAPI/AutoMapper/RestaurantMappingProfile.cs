@@ -24,9 +24,6 @@ namespace RestaurantAPI.AutoMapper
                     PostalCode = dto.PostalCode,
                 }
                 ));
-
-            CreateMap<UpdateRestaurantDto,Restaurant>()
-                .ForMember(n=>n.Name)
         }
     }
 }
