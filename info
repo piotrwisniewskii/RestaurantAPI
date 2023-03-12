@@ -261,3 +261,23 @@ Error Number:4060,State:1,Class:11
    --- End of inner exception stack trace ---
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2023-03-12 18:52:21.417 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-12 18:52:21.442 +01:00 [INF] Hosting environment: Development
+2023-03-12 18:52:21.444 +01:00 [INF] Content root path: C:\Users\piotr\Desktop\C#\REST WebAPI\RestaurantAPI\RestaurantAPI\
+2023-03-12 18:52:21.444 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/weatherforecast - -
+2023-03-12 18:52:21.524 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/weatherforecast - - - 404 - - 82.9770ms
+2023-03-12 18:52:22.484 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44335/api/restaurant?count=10 - -
+2023-03-12 18:52:22.494 +01:00 [INF] Executing endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 18:52:22.538 +01:00 [INF] Route matched with {action = "GetAll", controller = "Restaurant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RestaurantAPI.Models.RestaurantDto]] GetAll() on controller RestaurantAPI.Controllers.RestaurantController (RestaurantAPI).
+2023-03-12 18:52:22.820 +01:00 [INF] all Restaurants were shown
+2023-03-12 18:52:23.473 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Dish'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-03-12 18:52:24.625 +01:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[AddressId], [r].[Category], [r].[ContactEmail], [r].[ContactNumber], [r].[Description], [r].[HasDelivery], [r].[Name], [a].[Id], [a].[City], [a].[PostalCode], [a].[Street], [d].[Id], [d].[Description], [d].[Name], [d].[Price], [d].[RestaurantId]
+FROM [Restaurants] AS [r]
+INNER JOIN [Addresses] AS [a] ON [r].[AddressId] = [a].[Id]
+LEFT JOIN [Dishes] AS [d] ON [r].[Id] = [d].[RestaurantId]
+ORDER BY [r].[Id], [a].[Id]
+2023-03-12 18:52:24.753 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestaurantAPI.Models.RestaurantDto, RestaurantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-12 18:52:24.864 +01:00 [INF] Executed action RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI) in 2322.3407ms
+2023-03-12 18:52:24.864 +01:00 [INF] Executed endpoint 'RestaurantAPI.Controllers.RestaurantController.GetAll (RestaurantAPI)'
+2023-03-12 18:52:24.879 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44335/api/restaurant?count=10 - - - 200 - application/json;+charset=utf-8 2394.6565ms
